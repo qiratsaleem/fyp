@@ -1,0 +1,112 @@
+.details-page-container {
+    background-color: #24242d; 
+    color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+}
+
+.details-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    flex: 1;
+}
+
+.back-arrow {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.output-heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #f0f0f0;
+    font-size: 1.8em;
+}
+
+.menu-button {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    left: -20px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.predicted-outcome, .ti-platforms, .threshold-comparison {
+    background-color: #1e1e3f;
+    padding: 20px;
+    border-radius: 8px;
+    color: #f0f0f0;
+}
+
+.platform-status ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.platform-item {
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.platform-item:hover {
+    background-color: #1e1e3f;
+}
+.predicted-outcome {
+    background-color: #1e1e3f; 
+    padding: 20px;
+    border-radius: 8px;
+    flex: 2;
+}
+.ti-platforms {
+    background-color: #1e1e3f; 
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    color: #f0f0f0;
+}
+.platform-status ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.platform-item {
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.platform-item:hover {
+    background-color: #3a3a55; 
+}
+.threshold-comparison {
+    margin-top: 20px;
+    background-color: #1e1e3f;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.chart-placeholder {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ff00; 
+    font-size: 1.2em;
+}
