@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Bar } from "react-chartjs-2";
@@ -18,10 +17,24 @@ function DetailsPage() {
       {
         label: "Value",
         data: [30, 45, 60, 80],
-        backgroundColor: ["#FF5C5C", "#FF8A33", "#E3E100", "#D47FFF"],
+        backgroundColor: [
+          "rgba(128, 0, 128, 0.8)",
+          "rgba(0, 123, 255, 0.8)",
+          "rgba(255, 165, 0, 0.8)",
+          "rgba(76, 175, 80, 0.8)"
+        ],
+        hoverBackgroundColor: [
+          "rgba(90, 0, 90, 1)",
+          "rgba(0, 86, 179, 1)",
+          "rgba(204, 132, 0, 1)",
+          "rgba(56, 124, 59, 1)"
+        ],
+        barPercentage: 0.4,
+        borderRadius: 5,
       },
     ],
   };
+  
 
   const handleBackClick = () => {
     navigate("/");
@@ -35,13 +48,18 @@ function DetailsPage() {
     <div className="details-page-container">
       <Sidebar isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
       <div className="details-page">
-        <div className="header">
-          <div className="back-arrow" onClick={handleBackClick}>
-            &#8592;
-          </div>
-          <h1 className="output-heading">Threat Intelligence Output</h1>
-          <button onClick={() => setMenuOpen(!menuOpen)} className="menu-button">☰</button>
+        {/* Back Arrow */}
+        <div className="back-arrow" onClick={handleBackClick}>
+          &#8592;
         </div>
+        
+        {/* Menu Button */}
+        <button onClick={() => setMenuOpen(!menuOpen)} className="menu-button">
+          ☰
+        </button>
+        
+        {/* Heading without container */}
+        <h1 className="output-heading">Threat Intelligence Output</h1>
 
         <div className="main-content">
           <div className="predicted-outcome">

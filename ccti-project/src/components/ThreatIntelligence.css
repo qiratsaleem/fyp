@@ -1,48 +1,51 @@
 
 .threat-intelligence-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: #0b0b1f;
-  color: #ffffff;
-}
+     background-color: #1c1c27;
+    color: #f0f0f0;
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #141433;
-  flex-shrink: 0;
-}
-
-.back-arrow {
-  font-size: 2em;
-  color: #f0f0f0;
-  cursor: pointer;
-}
+  .back-arrow {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
+    position: absolute; 
+    top: 30px;
+    left: 40px;
+  }
 
 .title {
   flex: 1;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: #ffffff;
   font-weight: 600;
 }
-.menu-icon {
+.menu-button {
   font-size: 1.5em;
-  color: #f0f0f0;
   cursor: pointer;
-  position: relative;
-  left: -40px; 
+  color: #fff;
+  position: absolute; 
+  top: 50px;
+  right: 40px;
 }
 .info-section {
   flex: 1;
   padding: 20px 40px;
   overflow-y: auto;
-  background-color: #1e1e3f;
-  color: #b0b0b0;
-  font-size: 1em;
+  background: linear-gradient(145deg, #1f1f2e, #252538);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 50px;
+  font-size: 12px;
+  flex: 1 1 45%; 
+  min-width: 300px; 
+  color: #f0f0f0;
+  box-sizing: border-box; 
 }
 
 .info-content {

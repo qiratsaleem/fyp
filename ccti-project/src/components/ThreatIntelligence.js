@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
 import Sidebar from "./Sidebar";
 import "./ThreatIntelligence.css";
 
@@ -11,16 +10,12 @@ const ThreatIntelligence = () => {
   return (
     <div className="threat-intelligence-container">
       <Sidebar isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
-
-      <header className="header">
         <span className="back-arrow" onClick={() => navigate("/details")}>&larr;</span>
+         {/* Menu Button */}
+        <button onClick={() => setMenuOpen(!menuOpen)} className="menu-button">
+          ☰
+        </button>
         <h1 className="title">Threat Intelligence xx</h1>
-        <FaBars
-          className="menu-icon"
-          onClick={() => setMenuOpen(!menuOpen)}
-        />
-      </header>
-
       <main className="info-section">
         <h2>Detailed information about Platform 1.</h2>
         <div className="info-content">
