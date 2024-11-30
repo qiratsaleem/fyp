@@ -1,97 +1,111 @@
 .dashboard-container {
-    background-color: #24242d;
-    color: #FFFFFF;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative; 
-  }
-  header {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .menu-button {
-    background: none;
-    border: none;
-    color: #FFFFFF;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  .dashboard-content {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .stats-cards {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .stat-card {
-    background-color: #1466B8;
-    color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    width: 20%;
-    font-size: 18px;
-  }
-  
+  background-color: #24242d;
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 24px;
+  margin: -30px;
+  cursor: pointer;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.stats-cards {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: -30px 40px;
+}
+
+.stat-card {
+  background-color: #1466B8;
+  color: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 10px;
+  flex: 1;
+  margin: 0 10px;
+}
+
 .chart-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-around;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .chart {
-    background-color: #1e1e3f;
-    padding: 10px; 
-    border-radius: 10px; 
-    width: 35%; 
+  background-color: #1e1e3f;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.large-chart {
+  width: 400px;
+  height: 300px; 
+}
+
+.small-chart {
+  width: 400px;
+  height: 400px; 
 }
 
 .chart h2 {
-    font-size: 14px; 
-    color: #FFFFFF;
-    margin-bottom: 6px; 
+  font-size: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: -5px;
 }
 
-
 .ip-entry-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .ip-input {
-    padding: 12px; 
-    border: 1px solid #CCCCCC;
-    border-radius: 4px;
-    font-size: 18px; 
-    margin-right: 10px;
-    width: 300px; 
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
 }
 
 .investigate-button {
-    background-color: #4CAF50;
-    color: #FFFFFF;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: #4CAF50;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.investigate-button:hover {
+  background-color: #062407; 
 }
