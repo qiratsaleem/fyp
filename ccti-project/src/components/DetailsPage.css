@@ -6,14 +6,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .details-page {
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 20px;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header-container {
@@ -23,8 +27,9 @@
   width: 100%;
   position: relative;
   margin-bottom: 20px;
-  flex-wrap: wrap; /* Allow the text to wrap if needed */
+  flex-wrap: wrap;
 }
+
 .back-arrow {
   font-size: 1.5em;
   cursor: pointer;
@@ -36,8 +41,8 @@
   cursor: pointer;
   color: #fff;
   position: absolute;
-  right: 20px; /* Aligns the menu button to the right */
-  top: 10px; /* Adjust spacing from the top */
+  right: 20px;
+  top: 10px;
   background: none;
   border: none;
 }
@@ -49,7 +54,7 @@
   font-size: 1.4em;
   margin-top: 20px;
   white-space: normal;
-  word-wrap: break-word; /* Allow wrapping if necessary */
+  word-wrap: break-word;
 }
 
 .main-content {
@@ -57,18 +62,20 @@
   justify-content: space-between;
   gap: 20px;
   width: 100%;
-  flex-wrap: wrap; 
-  box-sizing: border-box; 
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
+
 .predicted-outcome {
   background: linear-gradient(145deg, #1f1f2e, #252538);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
   border-radius: 15px;
   padding: 50px;
   font-size: 12px;
-  flex: 1 1 50%; 
-  min-width: 400px; 
-  box-sizing: border-box; 
+  flex: 1 1 50%;
+  min-width: 200px;
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Add space below */
 }
 
 .ti-platforms {
@@ -77,12 +84,13 @@
   border-radius: 15px;
   padding: 20px;
   font-size: 10px;
-  flex: 1 1 2%; 
-  min-width: 20px; 
+  flex: 1 1 10%;
+  min-width: 200px; /* Adjust to avoid over-expansion */
   color: #f0f0f0;
-  box-sizing: border-box; 
-  position: center;
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Add space below */
 }
+
 .platform-status ul {
   list-style-type: none;
   padding: 0;
@@ -92,12 +100,12 @@
   padding: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  position: center;
 }
 
 .platform-item:hover {
   background-color: #3a3a55;
 }
+
 .threshold-comparison {
   background: linear-gradient(145deg, #1f1f2e, #252538);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
@@ -105,34 +113,32 @@
   padding: 40px;
   font-size: 10px;
   margin-top: 20px;
+  width: 70%;
+  box-sizing: border-box;
   margin-left: 120px;
-  width: 70%; 
-  box-sizing: border-box; 
-  position:center;
+  margin-right: 120px;
 }
 
-/* Popup Overlay */
 .popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* Popup Content */
 .popup-content {
-  background: linear-gradient(145deg, #2f2f3e, #22222d); /* Dark gradient */
+  background: linear-gradient(145deg, #2f2f3e, #22222d);
   padding: 20px;
   border-radius: 12px;
   width: 90%;
   max-width: 400px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6); /* Drop shadow */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
   text-align: center;
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -151,7 +157,7 @@
 
 .popup-content button {
   padding: 10px 20px;
-  background-color: #4caf50; /* Green button */
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 5px;
@@ -164,7 +170,6 @@
   background-color: #45a049;
 }
 
-/* Close Button */
 .popup-close {
   position: absolute;
   top: 10px;
@@ -180,18 +185,26 @@
   color: #ff4d4d;
 }
 
+/* Mobile responsiveness fixes */
 @media (max-width: 768px) {
   .main-content {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
   }
 
   .predicted-outcome,
   .ti-platforms {
     flex: none;
-    width: 90%; 
-    margin-bottom: 20px; 
+    width: 90%;
     padding: 30px;
+    margin-bottom: 20px;
+  }
+
+  .threshold-comparison {
+    width: 90%;
+    padding: 15px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .back-arrow {
@@ -208,12 +221,8 @@
     font-size: 1.2em;
     margin-top: 10px;
   }
-
-  .threshold-comparison {
-    width: 90%;
-    padding: 15px;
-  }
 }
+
 @media (max-width: 480px) {
   .back-arrow {
     top: 20px;
