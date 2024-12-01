@@ -180,7 +180,6 @@
   color: #ff4d4d;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .main-content {
     flex-direction: column; 
@@ -190,7 +189,7 @@
   .predicted-outcome,
   .ti-platforms {
     flex: none;
-    width: 100%; 
+    width: 90%; 
     margin-bottom: 20px; 
     padding: 30px;
   }
@@ -211,11 +210,10 @@
   }
 
   .threshold-comparison {
-    width: 100%;
+    width: 90%;
     padding: 15px;
   }
 }
-
 @media (max-width: 480px) {
   .back-arrow {
     top: 20px;
