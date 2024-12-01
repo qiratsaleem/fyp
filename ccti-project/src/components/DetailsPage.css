@@ -190,7 +190,7 @@
   .predicted-outcome,
   .ti-platforms {
     flex: none;
-    width: 90%; 
+    width: 100%; 
     margin-bottom: 20px; 
     padding: 30px;
   }
@@ -211,7 +211,7 @@
   }
 
   .threshold-comparison {
-    width: 90%;
+    width: 100%;
     padding: 15px;
   }
 }
