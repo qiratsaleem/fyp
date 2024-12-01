@@ -1,4 +1,4 @@
-/* Container that holds the sidebar and main content */
+
 .details-page-container {
   background-color: #1c1c27;
   color: #f0f0f0;
@@ -9,8 +9,6 @@
   align-items: center;
  
 }
-
-/* Main page content */
 .details-page {
   flex: 1;
   display: flex;
@@ -18,18 +16,14 @@
   padding: 20px;
 
 }
-
-/* Position the back arrow */
 .back-arrow {
   font-size: 1.5em;
   cursor: pointer;
   color: #fff;
-  position: absolute; /* Fixed position outside container */
+  position: absolute; 
   top: 30px;
   left: 40px;
 }
-
-/* Position the menu button */
 .menu-button {
   font-size: 1.5em;
   cursor: pointer;
@@ -47,39 +41,35 @@
   margin-top: 20px; 
 }
 
-/* Main content area with sections */
 .main-content {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  width: 100%; /* Ensure full width */
-  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
-  box-sizing: border-box; /* Prevent overflow issues */
+  width: 100%;
+  flex-wrap: wrap; 
+  box-sizing: border-box; 
 }
-
-/* Styling for the predicted outcome section */
 .predicted-outcome {
   background: linear-gradient(145deg, #1f1f2e, #252538);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
   border-radius: 15px;
   padding: 50px;
   font-size: 12px;
-  flex: 1 1 45%; /* Allow it to grow and shrink but take up at least 45% width */
-  min-width: 300px; /* Ensure it doesn't shrink too much */
-  box-sizing: border-box; /* Prevent overflow */
+  flex: 1 1 45%; 
+  min-width: 300px; 
+  box-sizing: border-box; 
 }
 
-/* Styling for the TI platforms section */
 .ti-platforms {
   background: linear-gradient(145deg, #1f1f2e, #252538);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
   border-radius: 15px;
   padding: 50px;
   font-size: 12px;
-  flex: 1 1 45%; /* Allow it to grow and shrink but take up at least 45% width */
-  min-width: 300px; /* Ensure it doesn't shrink too much */
+  flex: 1 1 45%; 
+  min-width: 300px; 
   color: #f0f0f0;
-  box-sizing: border-box; /* Prevent overflow */
+  box-sizing: border-box; 
 }
 .platform-status ul {
   list-style-type: none;
@@ -95,7 +85,6 @@
 .platform-item:hover {
   background-color: #3a3a55;
 }
-/* Styling for threshold comparison chart */
 .threshold-comparison {
   background: linear-gradient(145deg, #1f1f2e, #252538);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
@@ -103,22 +92,21 @@
   padding: 20px;
   font-size: 10px;
   margin-top: 20px;
-  width: 100%; /* Ensure it takes full width */
-  box-sizing: border-box; /* Prevent overflow */
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
-/* Responsive Design for smaller screens */
 @media (max-width: 768px) {
   .main-content {
-    flex-direction: column; /* Stack sections vertically */
+    flex-direction: column; 
     align-items: center;
   }
 
   .predicted-outcome,
   .ti-platforms {
     flex: none;
-    width: 90%; /* Take full width with some margin */
-    margin-bottom: 20px; /* Add spacing between sections */
+    width: 90%; 
+    margin-bottom: 20px; 
     padding: 30px;
   }
 
@@ -142,8 +130,6 @@
     padding: 15px;
   }
 }
-
-/* Responsive Design for very small screens (Mobile) */
 @media (max-width: 480px) {
   .back-arrow {
     top: 10px;
@@ -171,6 +157,6 @@
   }
 
   .platform-item {
-    padding: 8px; /* Slightly bigger touch target */
+    padding: 8px;
   }
 }

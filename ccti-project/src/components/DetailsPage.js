@@ -52,13 +52,9 @@ function DetailsPage() {
         <div className="back-arrow" onClick={handleBackClick}>
           &#8592;
         </div>
-        
-        {/* Menu Button */}
         <button onClick={() => setMenuOpen(!menuOpen)} className="menu-button">
           ☰
         </button>
-        
-        {/* Heading without container */}
         <h1 className="output-heading">Threat Intelligence Output</h1>
 
         <div className="main-content">
