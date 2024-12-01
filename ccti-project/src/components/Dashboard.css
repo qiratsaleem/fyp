@@ -14,12 +14,12 @@ header {
   justify-content: flex-end;
   margin-bottom: 10px;
 }
+
 .menu-button {
   background: none;
   border: none;
   color: #FFFFFF;
   font-size: 24px;
-  margin: -30px;
   cursor: pointer;
 }
 
@@ -33,22 +33,24 @@ header {
 
 .stats-cards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 90%;
   gap: 15px;
-  margin: -20px 60px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #6d6d8d, #3b3b4e);
+  background: linear-gradient(135deg, #6969d3, #2828b5);
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 10px;
   color: #f0f0f0;
-  flex: 1;
-  min-width: 90px;
+  flex: 1 1 calc(40% - 10px); /* Adjust width */
+  min-width: 100px;
+  max-width: 150px;
 }
 
 .chart-container {
@@ -56,28 +58,26 @@ header {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .chart {
   background: linear-gradient(145deg, #1f1f2e, #252538);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
   border-radius: 15px;
-  padding: 50px;
+  padding: 20px;
   font-size: 10px;
+  flex: 1 1 calc(45% - 15px); /* Adjust width */
+  min-width: 280px;
 }
-
-.large-chart {
-  flex: 1;
-  max-width: 400px;
-  height: 300px;
-}
-
+.large-chart,
 .small-chart {
   flex: 1;
-  max-width: 400px;
-  height: 300px;
+  width: 90%; /* Make it responsive */
+  max-width: 400px; /* Limit max size */
+  height: auto; /* Maintain aspect ratio */
 }
+
 
 .ip-entry-section {
   display: flex;
@@ -102,4 +102,38 @@ header {
 }
 .investigate-button:hover {
   background-color: #062407; 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .stat-card {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .chart {
+    flex: 1 1 calc(100% - 15px);
+  }
+
+  .chart-container {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-button {
+    font-size: 20px;
+  }
+
+  .stat-card {
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .ip-input {
+    width: 100%;
+  }
+
+  .investigate-button {
+    width: 100%;
+  }
 }

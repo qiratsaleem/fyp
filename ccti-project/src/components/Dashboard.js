@@ -101,14 +101,14 @@ function Dashboard() {
 
   const chartOptions = {
     responsive: true,
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
     plugins: {
       legend: {
         display: true,
         position: "top",
         labels: {
           color: "#FFFFFF",
-          font: { size: 14, family: "Arial" },
+          font: { size: 10, family: "Arial" },
         },
       },
       tooltip: {
