@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
 header {
@@ -35,9 +36,9 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15px;
+  gap: 10px;
   margin: 0 auto;
-  width: 80%;
+  width: 50%;
 }
 
 .stat-card {
@@ -46,9 +47,9 @@ header {
   padding: 15px;
   text-align: center;
   border-radius: 10px;
-  font-size: 10px;
+  font-size: 12px;
   color: #f0f0f0;
-  flex: 1 1 calc(40% - 10px); /* Adjust width */
+  flex: 1 1 calc(40% - 10px);
   min-width: 100px;
   max-width: 150px;
 }
@@ -56,7 +57,7 @@ header {
 .chart-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
   margin-top: 30px;
 }
@@ -67,22 +68,24 @@ header {
   border-radius: 15px;
   padding: 20px;
   font-size: 10px;
-  flex: 1 1 calc(45% - 15px); /* Adjust width */
-  min-width: 280px;
+  flex: 1 1 calc(45% - 15px); 
+  min-width: 600px;
 }
 .large-chart,
 .small-chart {
   flex: 1;
-  width: 90%; /* Make it responsive */
-  max-width: 400px; /* Limit max size */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  max-width: 400px; 
+  height: 400; 
 }
 
 
 .ip-entry-section {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: center; 
+  margin-top: 20px;       
+  width: 100%;
+  background-color: transparent; 
 }
 
 .ip-input {
@@ -90,51 +93,54 @@ header {
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-right: 10px;
+  max-width: 300px; 
+  width: 200%;      
 }
 
 .investigate-button {
-  padding: -10px 0px;
+  padding: 2px 10px;
   background-color: #4caf50;
   border: none;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 10px;
 }
+
 .investigate-button:hover {
   background-color: #062407; 
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
   .stat-card {
-    flex: 1 1 calc(50% - 10px);
+      flex: 1 1 calc(50% - 10px);
   }
 
   .chart {
-    flex: 1 1 calc(100% - 15px);
+      flex: 1 1 calc(100% - 15px);
   }
 
   .chart-container {
-    gap: 15px;
+      gap: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .menu-button {
-    font-size: 20px;
+      font-size: 20px;
   }
 
   .stat-card {
-    font-size: 10px;
-    padding: 10px;
+      font-size: 10px;
+      padding: 10px;
   }
 
   .ip-input {
-    width: 100%;
+      width: 100%;
   }
 
   .investigate-button {
-    width: 100%;
+      width: 100%;
   }
 }
