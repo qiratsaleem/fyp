@@ -10,10 +10,8 @@ Chart.register(...registerables);
 function DetailsPage() {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // Modal state
   const [showPopup, setShowPopup] = useState(false);
-  const [popupData, setPopupData] = useState({}); // Store platform data for the popup
+  const [popupData, setPopupData] = useState({});
 
   const thresholdComparisonData = {
     labels: ["Threshold 1", "Threshold 2", "Threshold 3", "Threshold 4"],
@@ -39,11 +37,9 @@ function DetailsPage() {
     ],
   };
 
-  const handleBackClick = () => {
-    navigate("/");
-  };
+  const handleBackClick = () => navigate("/");
+  const handleReportNavigation = () => navigate("/report");
 
-  // Handle platform click for the popup
   const handlePlatformClick = (platform) => {
     const platformDetails = {
       "Virus Total": {
@@ -67,15 +63,11 @@ function DetailsPage() {
         reputation: "Good",
       },
     };
-
-    // Set popup data and show modal
     setPopupData(platformDetails[platform]);
     setShowPopup(true);
   };
 
-  const closePopup = () => {
-    setShowPopup(false);
-  };
+  const closePopup = () => setShowPopup(false);
 
   return (
     <div className="details-page-container">
@@ -94,7 +86,6 @@ function DetailsPage() {
           </button>
         </div>
 
-        {/* Main Content */}
         <div className="main-content">
           <div className="predicted-outcome">
             <h2>Predicted Outcome</h2>
@@ -111,6 +102,10 @@ function DetailsPage() {
               The system has analyzed data from multiple platforms, providing a
               unified reputation score to indicate the overall security posture.
             </p>
+            {/* Generate Report Button */}
+            <button className="generate-report-btn" onClick={handleReportNavigation}>
+              Generate Report
+            </button>
           </div>
 
           <div className="ti-platforms">
@@ -154,14 +149,12 @@ function DetailsPage() {
           </div>
         </div>
 
-        {/* Threshold Comparison Chart */}
         <div className="threshold-comparison">
           <h3>Threshold Comparison</h3>
           <Bar data={thresholdComparisonData} options={{ responsive: true }} />
         </div>
       </div>
 
-      {/* Popup Modal */}
       {showPopup && (
         <div className="popup-overlay">
           <div className="popup-content">

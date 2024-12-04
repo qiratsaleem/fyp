@@ -77,6 +77,25 @@
   box-sizing: border-box;
   margin-bottom: 20px; /* Add space below */
 }
+.generate-report-btn {
+  margin-top: 15px;
+  padding: 4px 4px; /* Button size reduced */
+  background: linear-gradient(145deg, #4caf50, #45a049);
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Reduced border radius */
+  font-size: 0.7rem; /* Reduced font size */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Smaller shadow */
+}
+
+.generate-report-btn:hover {
+  background: linear-gradient(145deg, #6baf6e, #327b34);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Adjusted hover shadow */
+  transform: scale(1.03); /* Slight hover effect */
+}
+
 
 .ti-platforms {
   background: linear-gradient(145deg, #1f1f2e, #252538);

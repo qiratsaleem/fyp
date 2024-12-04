@@ -93,12 +93,13 @@ header {
 }
 
 .investigate-button {
-  padding: 10px 20px;
+  padding: -10px 0px;
   background-color: #4caf50;
   border: none;
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 10px;
 }
 .investigate-button:hover {
   background-color: #062407; 
